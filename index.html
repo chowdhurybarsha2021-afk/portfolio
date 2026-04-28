@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barsha Chowdhury | Portfolio</title>
+
+<meta name="description" content="Barsha Chowdhury Portfolio | CSE Student | Web Developer | CV">
+<meta name="keywords" content="Barsha Chowdhury, Portfolio, CSE Student, Volunteer, wWeb Developer, Projects, CV">
+<meta name="author" content="Barsha Chowdhury">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background: linear-gradient(-45deg,#6a11cb,#2575fc,#6a11cb,#2575fc);
+  background-size:400% 400%;
+  animation: gradientMove 15s ease infinite;
+  color:#fff;
+  transition:0.5s;
+}
+
+body.light{
+  background: linear-gradient(-45deg,#fdfbfb,#ebedee,#fdfbfb,#ebedee);
+  color:#000;
+}
+
+@keyframes gradientMove{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+header{
+  text-align:center;
+  padding:60px 20px;
+}
+
+.profile-pic{
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  border:5px solid rgba(175, 186, 23, 0.8);
+  object-fit:cover;
+}
+
+h1{
+  margin-top:20px;
+  font-size:2.6rem;
+  color:#ffd166;
+}
+
+.tagline{
+  margin-top:10px;
+  font-size:1.1rem;
+  opacity:.9;
+}
+
+.social{
+  margin-top:15px;
+}
+
+.social a{
+  color:#ffd166;
+  margin:0 10px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.toggle{
+  position:fixed;
+  top:20px;
+  left:20px;
+  background:#ffd166;
+  color:#000;
+  padding:10px 15px;
+  border-radius:20px;
+  font-weight:600;
+  cursor:pointer;
+  z-index:1000;
+}
+
+.menu-btn{
+  position:fixed;
+  top:20px;
+  right:20px;
+  background:#ffd166;
+  color:#000;
+  padding:12px 18px;
+  border-radius:20px;
+  font-weight:600;
+  cursor:pointer;
+  z-index:1000;
+}
+
+.dropdown-menu{
+  position:fixed;
+  top:70px;
+  right:20px;
+  background:rgba(0,0,0,0.85);
+  backdrop-filter:blur(10px);
+  border-radius:15px;
+  display:none;
+  flex-direction:column;
+  padding:10px 20px;
+  z-index:999;
+}
+
+.dropdown-menu a{
+  color:#fff;
+  text-decoration:none;
+  padding:12px;
+  margin:5px 0;
+  border-radius:12px;
+  font-weight:600;
+  transition:0.3s;
+}
+
+section{
+  max-width:900px;
+  margin:70px auto;
+  padding:0 20px;
+}
+
+section h2{
+  text-align:center;
+  margin-bottom:25px;
+  color:#ffd166;
+}
+
+.card{
+  background:rgba(255,209,102,0.15);
+  padding:30px;
+  border-radius:22px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.25);
+}
+
+.btn{
+  display:inline-block;
+  margin-top:15px;
+  padding:12px 22px;
+  border-radius:25px;
+  background:#ffd166;
+  color:#000;
+  text-decoration:none;
+  font-weight:600;
+}
+
+footer{
+  text-align:center;
+  padding:35px;
+  opacity:.8;
+}
+</style>
+</head>
+
+<body>
+
+<div class="toggle" onclick="toggleMode()">🌙 / ☀️</div>
+
+<div class="menu-btn" onclick="toggleMenu()">☰ Menu</div>
+
+<div class="dropdown-menu" id="dropdownMenu">
+
+  <a href="#objective" style="background:#ff6b6b;">Objective</a>
+  <a href="#about" style="background:#feca57;">About</a>
+  <a href="#skills" style="background:#1dd1a1;">Skills</a>
+  <a href="#experience" style="background:#54a0ff;">Experience</a>
+  <a href="#projects" style="background:#5f27cd;">Projects</a>
+  <a href="#certificates" style="background:#ff9ff3;">Certificates</a>
+  <a href="#cv" style="background:#ff6b6b;">CV</a>
+  <a href="#contact" style="background:#48dbfb;">Contact</a>
+
+</div>
+
+<header>
+
+  <img src="profile.jpg" class="profile-pic">
+
+  <h1>Barsha Chowdhury</h1>
+  <p class="tagline">CSE Student</p>
+
+  <div class="social">
+    <a href="https://github.com/chowdhurybarsha2021-afk" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/barsha-chowdhury-a60975368" target="_blank">LinkedIn</a>
+    <a href="https://www.facebook.com/barsha.chowdhury.9674" target="_blank">Facebook</a>
+  </div>
+
+</header>
+
+<section id="objective">
+  <h2>Objective</h2>
+  <div class="card">
+    <p>To grow as a dedicated Computer Science and Engineering professional by combining my technical skills with social responsibility.</p>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About Me</h2>
+  <div class="card">
+    <p>I am a passionate CSE student interested in web development, AI, and volunteering.</p>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="card">
+    <ul>
+      <li>HTML, CSS, JavaScript</li>
+      <li>Python, C, Java</li>
+      <li>Problem Solving</li>
+    </ul>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="card">
+    <p>Volunteer Leader and Event Coordinator</p>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="card">
+    <ul>
+      <li>Portfolio Website</li>
+      <li>Python Data Project</li>
+    </ul>
+  </div>
+</section>
+
+<section id="certificates">
+  <h2>Certificates</h2>
+  <div class="card">
+    <p>Online course certificates and volunteering experience</p>
+  </div>
+</section>
+
+<section id="cv">
+  <h2>CV</h2>
+  <div class="card">
+    <a href="cv.pdf" class="btn" download>Download CV</a>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="card">
+
+    <p>
+      Email:
+      <a href="mailto:chowdhurybarsha2021@gmail.com" style="color:#ffd166;">
+        chowdhurybarsha2021@gmail.com
+      </a>
+    </p>
+
+    <p>Phone: 01844807986</p>
+
+  </div>
+</section>
+
+<footer>
+© 2026 Barsha Chowdhury | Designed with ❤️
+</footer>
+
+<script>
+function toggleMode(){
+  document.body.classList.toggle("light");
+}
+
+function toggleMenu(){
+  const menu = document.getElementById("dropdownMenu");
+  menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+}
+</script>
+
+</body>
+</html>
