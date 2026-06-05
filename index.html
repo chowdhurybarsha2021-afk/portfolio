@@ -18,17 +18,20 @@
   box-sizing:border-box;
   font-family:'Poppins',sans-serif;
 }
+html{
+  scroll-behavior:smooth;
+} 
 
 body{
-  background: linear-gradient(-45deg,#6a11cb,#2575fc,#6a11cb,#2575fc);
+  min-height:100vh;
+  background:linear-gradient(-45deg,#ff512f,#dd2476,#24c6dc,#514a9d);
   background-size:400% 400%;
-  animation: gradientMove 15s ease infinite;
+  animation:gradientMove 12s ease infinite;
   color:#fff;
-  transition:0.5s;
 }
 
 body.light{
-  background: linear-gradient(-45deg,#fdfbfb,#ebedee,#fdfbfb,#ebedee);
+  background:linear-gradient(135deg,#f5f7fa,#c3cfe2);
   color:#000;
 }
 
@@ -39,15 +42,18 @@ body.light{
 }
 
 header{
-  text-align:center;
-  padding:60px 20px;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
 }
 
 .profile-pic{
   width:150px;
   height:150px;
   border-radius:50%;
-  border:5px solid rgba(175, 186, 23, 0.8);
+  border:5px solid #ffd166;
   object-fit:cover;
 }
 
@@ -81,8 +87,8 @@ h1{
   background:#ffd166;
   color:#000;
   padding:10px 15px;
-  border-radius:20px;
-  font-weight:600;
+  border-radius:30px;
+  font-weight:700;
   cursor:pointer;
   z-index:1000;
 }
@@ -94,8 +100,8 @@ h1{
   background:#ffd166;
   color:#000;
   padding:12px 18px;
-  border-radius:20px;
-  font-weight:600;
+  border-radius:30px;
+ font-weight:700;
   cursor:pointer;
   z-index:1000;
 }
@@ -104,23 +110,25 @@ h1{
   position:fixed;
   top:70px;
   right:20px;
-  background:rgba(0,0,0,0.85);
-  backdrop-filter:blur(10px);
-  border-radius:15px;
   display:none;
   flex-direction:column;
-  padding:10px 20px;
   z-index:999;
+  background:none;
 }
 
 .dropdown-menu a{
+  display:block;
+  padding:10px 20px;
+  margin:6px 0;
+  border-radius:20px;
   color:#fff;
   text-decoration:none;
-  padding:12px;
-  margin:5px 0;
-  border-radius:12px;
   font-weight:600;
-  transition:0.3s;
+  transition:.3s;
+}
+
+.dropdown-menu a:hover{
+  transform:translateX(-5px);
 }
 
 section{
@@ -136,7 +144,8 @@ section h2{
 }
 
 .card{
-  background:rgba(255,209,102,0.15);
+  background:rgba(0,0,0,0.35);
+  backdrop-filter:blur(12px);
   padding:30px;
   border-radius:22px;
   box-shadow:0 10px 25px rgba(0,0,0,0.25);
@@ -158,6 +167,22 @@ footer{
   padding:35px;
   opacity:.8;
 }
+
+.profile-card{
+  background:rgba(0,0,0,0.35);
+  backdrop-filter:blur(12px);
+  padding:45px 35px;
+  border-radius:25px;
+  text-align:center;
+  max-width:420px;
+}
+
+body.light .profile-card{
+  background:rgba(255,255,255,0.9);
+  color:#000;
+}
+
+
 </style>
 </head>
 
@@ -181,7 +206,7 @@ footer{
 </div>
 
 <header>
-
+<div class="profile-card">
   <img src="profile.jpg" class="profile-pic">
 
   <h1>Barsha Chowdhury</h1>
@@ -192,6 +217,7 @@ footer{
     <a href="https://www.linkedin.com/in/barsha-chowdhury-a60975368" target="_blank">LinkedIn</a>
     <a href="https://www.facebook.com/barsha.chowdhury.9674" target="_blank">Facebook</a>
   </div>
+   </div>
 
 </header>
 
@@ -213,10 +239,12 @@ footer{
   <h2>Skills</h2>
   <div class="card">
     <ul>
-      <li>HTML, CSS, JavaScript</li>
-      <li>Python, C, Java</li>
-      <li>Problem Solving</li>
-    </ul>
+    <li>💻 Programming Languages: Python, C, C++, Java, JavaScript</li>
+    <li>🌐 Web Development: HTML5, CSS3, JavaScript, React (Basic)</li>
+    <li>📊 Data Analysis & ML: Pandas, NumPy, Scikit-learn</li>
+    <li>🛠 Tools & Platforms: Git, GitHub, VS Code, Figma</li>
+    <li>🎨 UI/UX Design & Responsive Web Design</li>
+  </ul>
   </div>
 </section>
 
